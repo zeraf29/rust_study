@@ -72,4 +72,27 @@ fn main() {
     let z = 'z';
     //let heart_eyed_cat = '';
 
+
+
+    // 컴파운드 타입(compound type): 하나의 타입으로 여러개의 값을 그룹화한 타입 
+    // 기본적으로 튜플(tupes)과 배열(arrays)등 두 가지 컴파운드 타입을 지원 
+
+    // 튜플 타입 
+    // 서로 다른 타입의 여러 값을 하나의 컴파운드 타입으로 그룹화 하기에 적합한 타입
+    // 고정된 길이를 가짐. 한번 정의하면 그 크기를 재정의 못함 
+    // 튜플의 각 요소는 타입을 가지며, 반드시 같을 필요는 없다. 선택적으로 타입 애노테이션 적용 가능 
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+
+    let tup2 = (500, 6.4, 1);
+    let (x, y, z) = tup;
+    println!("y 값: {}", y);
+
+
+    let tup3 = (500, 6.4, 1);
+    let five_hundred = tup3.0;
+    let six_point_four = tup3.1;
+    let one = tup3.2;
+    println!("x, y, z: {}, {}, {}", five_hundred, six_point_four, one);
+   
+
 }

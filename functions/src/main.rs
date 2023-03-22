@@ -8,6 +8,13 @@ fn main() {
 	another_function_2(15, 30);
 
     another_function_3();
+
+    let five = five();
+
+	println!("함수 five를 통한 x의 값: {}", five);
+
+	let plus_one = plus_one(5);
+	println!("함수 plus_one을 통한 x의 값: {}", plus_one);
 }
 
 
@@ -43,4 +50,22 @@ fn another_function_3(){
 	};
 
 	println!("x 의 값:{}, y의 값:{}", x, y);
+}
+
+// 리턴값에는 이름을 부여하지는 않지만, 리턴할 값의 타입은 화살표(->) 다음에 지정
+fn five() -> i32 {
+	//세미콜론 없이 리턴할 값만 작성
+	5
+}
+
+// 함수에서 값을 전달(리턴) 하려면 세미콜론 없이 작성 종료 하거나 return ; 형태로 작성 
+fn plus_one(x: i32) -> i32 {
+	//return 없이 x+1; 로 하면 에러
+	//x+1;
+
+	//return ; 형태로 리턴값 지정하거나
+	//return x + 1; 
+
+	//return과 ; 없이 리턴할 값만 지정해서 반환값 명시
+	x+1
 }
